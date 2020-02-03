@@ -1,0 +1,11 @@
+.dynamic_width {
+    width: calc(100% - #{$dashboard_sidebar_width});
+    float: right;
+    @include transition(.5s);
+    @media (max-width: 991px) {
+        width: 100%;
+        &.activedash {
+            transform: translateX($dashboard_sidebar_width);
+        }
+    }
+}

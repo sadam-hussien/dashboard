@@ -1,0 +1,319 @@
+.dashboard {
+
+    // start dashboard_inner
+    .dashboard_inner {
+        overflow: hidden;
+        // start dashboard_content
+        .dashboard_content {
+            
+
+            // start dashboard_items
+            .dashboard_items {
+
+                // start card_chart
+                .card_chart {
+                    background-color: $deep;
+                    padding: $medium_distance;
+                    border-radius: 10px;
+                    margin-bottom: $large_distance;
+
+                    // start chart_content
+                    .chart_content {
+
+                        // start chart_content_head
+                        .chart_content_head {
+                            position: relative;
+                            z-index: 9999;
+                            margin-bottom: $medium_distance;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            @media (max-width: 767px) {
+                                flex-direction: column;
+                                align-items: flex-start;
+                            }
+
+                            // start chart_content_head_text
+                            .chart_content_head_text {
+                                span.sub-title {
+                                    color: $gray;
+                                    font-size: $small_font;
+                                }
+                                .chart_title {
+                                    color: $white;
+                                    margin-top: 5px;
+                                    span.icon {
+                                        color: $pink;
+                                        margin-right: $small_distance;
+                                        font-size: $large_font;
+                                    }
+                                }
+                            }
+                            // ** end chart_content_head_text
+
+                            // start charts_updates_btn
+                            .charts_updates_btn {
+                                border: 1px solid $pink;
+                                border-radius: 10px;
+                                overflow: hidden;
+                                @media (max-width: 767px) {
+                                    align-self: flex-end;
+                                }
+                                button {
+                                    border: none;
+                                    background-color: transparent;
+                                    color: $pink;
+                                    padding: 3px $small_distance;
+                                    font-size: 14px;
+                                    @include transition(.5s);
+                                    &:not(:last-of-type) {
+                                        border-right: 1px solid $pink;
+                                    }
+                                    &:hover, &.active {
+                                        background-color: $pink;
+                                        color: $white;
+                                    }
+                                }
+                            }
+                            // ** end charts_updates_btn
+
+                        }
+                        // ** end chart_content_head
+
+                        canvas {
+                            max-height: 280px;
+                        }
+
+                    }
+                    // ** end chart_content
+
+                }
+                // ** end card_chart
+
+                // start performance_item
+                .performance_item {
+                    // start chart_content_body
+                    .chart_content_body {
+                        canvas {
+                            // max-height: 300px;
+                        }
+                    }
+                    // ** end chart_content_body
+                }
+                // ** end performance_item
+
+                // START daily_item
+                .daily_item {
+                    .chart_content_head {
+                        .chart_content_head_text {
+                            span.sub-title {
+                                
+                            }
+                            .chart_title {
+                                color: $white;
+                                margin-top: 5px;
+                                span.icon {
+                                    color: #1f8ef1 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+                // ** end daily_item
+
+                // start completed_item
+                .completed_item {
+                    .chart_content_head {
+                        .chart_content_head_text {
+                            span.sub-title {
+                                
+                            }
+                            .chart_title {
+                                color: $white;
+                                margin-top: 5px;
+                                span.icon {
+                                    color: #00d6b4 !important;
+                                }
+                            }
+                        }
+                    }
+                }
+                // ** end completed_item
+
+            }
+            // ** end dashboard_items
+
+
+        }
+        // ** end dashboard_content
+
+    }
+    // ** end dashboard_inner
+
+    // start tasks
+    .tasks {
+
+        // start tasks_items
+        .tasks_items {
+
+            .task_globals {
+                background-color: $deep;
+                border-radius: 10px;
+                margin-bottom: $large_distance;
+                padding: $medium_distance;
+            }
+
+            // start t_item
+            .t_item {
+
+                // start t_item_inner
+                .t_item_inner {
+
+                    // start t_item_head
+                    .t_item_head {
+                        margin-bottom: $medium_distance;
+                        .t_item_head_title {
+                            .text {
+                                color: $white;
+                                margin-right: $medium_distance;
+                            }
+                            .sub-title {
+                                color: $gray;
+                            }
+                        }
+                    }
+                    // ** end t_item_head
+
+                    // start t_item_body
+                    .t_item_body {                        
+                        max-height: 374px;
+                        overflow: auto;
+                        // start single_task 
+                        .single_task {
+                            margin-bottom: $medium_distance;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+
+                            .left_area {
+                                display: flex;
+                                align-items: center;
+                                max-width: 90%;
+                                overflow: hidden;
+                                word-break: break-all;
+                            }
+
+                            // start checkbox_area
+                            .checkbox_area {
+                                margin-right: $medium_distance;
+                                input[type=checkbox] {
+                                    appearance: none;
+                                    border: 1px solid $white;
+                                    width: 25px;
+                                    height: 25px;
+                                    border-radius: 5px;
+                                    position: relative;
+                                    @include transition(.5s);
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -80%) rotate(-45deg);
+                                        width: 55%;
+                                        height: 8px;
+                                        border-left: 2px solid $white;
+                                        border-bottom: 2px solid $white;
+                                        opacity: 0;
+                                        @include transition(.5s);
+                                    }
+                                    &:checked {
+                                        background-color: $pink;
+                                        border: 1px solid $pink;
+                                        &::after {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                            // ** end checkbox_area
+
+                            // start single_task_content
+                            .single_task_content {
+
+                                // start single_task_content_title
+                                .single_task_content_title {
+                                    color: $white;
+                                    margin-bottom: 5px;
+                                    
+                                }
+                                // ** end single_task_content_title 
+                                p {
+                                    margin-bottom: 0;
+                                    font-size: 13px !important;
+                                }
+
+                            }
+                            // ** end single_task_content
+
+                            // start task_edit
+                            .task_edit {        
+                                color: $gray;
+                                font-size: $large_font;
+                                cursor: pointer;
+                                @include transition(.5s);
+                                &:hover {
+                                    color: $white;
+                                }
+                            }
+                            // ** end task_edit
+
+                        }
+                        // ** end single_task
+                    }
+                    // ** end t_item_body
+
+                }
+                // ** end t_item_inner
+            }
+            // ** end t_item
+
+            // start tabel_describe
+            .tabel_describe {
+                overflow: hidden;
+
+                // start tabel_describe_title
+                .tabel_describe_title {
+                    color: $white;
+                    margin-bottom: $medium_distance;
+                }
+                // ** end tabel_describe_title
+
+                // start table
+                .table {
+                    text-align: center;
+                    th {
+                        border-bottom: none !important;
+                        border-top: none !important;
+                        color: $white;
+                        font-size: $small_font !important;
+                    }
+                    td {
+                        color: $gray;
+                        font-size: 13px;
+                        border-top: 1px solid $gray !important;
+                    }
+
+                }
+                // ** end table
+
+            }
+            // ** end tabel_describe
+
+        }
+        // ** end tasks_items
+
+    }
+    // ** end tasks
+
+}

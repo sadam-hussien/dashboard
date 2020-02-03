@@ -1,0 +1,14 @@
+block dashboard_content
+    section.dashboard_content.dynamic_width.position-relative
+        .container-fluid
+            // start dashboard_items
+            include dash_items
+            // ** end dashboard_items            
+
+            // start tasks
+            include tasks
+            // ** end tasks
+
+            // start footer
+            include ../layout/footer
+            // ** end footer

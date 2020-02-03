@@ -1,0 +1,30 @@
+footer {
+    height: $header_height;
+    margin-top: $large_distance;
+    ul {
+        @media (max-width: 767px) {
+            margin-bottom: $medium_distance;
+        }
+        li {
+            a {
+                color: $white;
+                font-size: $small_font;
+                margin-right: $medium_distance;
+                text-transform: capitalize;
+                @include transition(.5s);
+                &:hover {
+                    color: $pink;
+                }
+            }
+        }
+    }
+    p {
+        a {
+            color: $white;
+            margin: 0 5px;
+            &:hover {
+                color: $pink;
+            }
+        }
+    }
+}

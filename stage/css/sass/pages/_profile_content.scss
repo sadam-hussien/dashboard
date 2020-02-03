@@ -1,0 +1,96 @@
+.profile_content {
+
+    // start profile_content_inner
+    .profile_content_inner {
+        
+        // start profile_edit
+        .profile_edit {
+            background: $deep;
+            padding: $medium_distance;
+            border-radius: 10px;
+            // start profile_edit_inner
+            .profile_edit_inner {
+
+                // start profile_edit_head
+                .profile_edit_head {
+                    h6 {
+                        color: $white;
+                        margin-bottom: $medium_distance;
+                        text-transform: capitalize;
+                    }
+                }
+                // ** end profile_edit_head
+
+                // start profile_edit_body
+                .profile_edit_body {
+                    background: transparent;
+                    border: none;
+                    .form-group {
+                        margin-bottom: $medium_distance;
+                    }
+                    .single_inpt {
+                        &:not(:last-of-type) {
+                            margin-right: $small_distance;
+                        }
+                    }
+                    label {
+                        color: $gray;
+                        font-size: $small_font;
+                        margin-bottom: $small_distance;
+                    }
+                    input {
+                        background: transparent;
+                        border: 1px solid #2b3553;
+                        border-radius: 5px;
+                        color: rgba($white, .8);
+                        font-size: $small_font;
+                        padding: 10px;
+                        @include transition(.5s);
+                        &:disabled {
+                            background: $dark;
+                            color: $deep;
+                            cursor: not-allowed;
+                        }
+                        &:focus {
+                            border-color: $pink;
+                        }
+                    }
+                    textarea {
+                        background: transparent;
+                        border: none;
+                        border-bottom: 1px solid #2b3553;
+                        color: rgba($white, .8);
+                        font-size: $small_font;
+                        width: 90%;
+                        height: 100px;
+                        resize: none;
+                        &:focus {
+                            border-color: $pink;
+                            box-shadow: none;
+                        }
+                    }
+                    .svae_inp button {
+                        border-radius: 10px;
+                        background-image: linear-gradient(to bottom left, $pink, $blue, $pink);
+                        padding: $small_distance 0;
+                        width: 150px;
+                        font-weight: bold;
+                        border: none;
+                        color: $white;
+                        @include transition(.5s);
+                        &:hover {
+                            transform: translateY(-10px);
+                        }
+                    }
+                }
+                // ** end profile_edit_body
+
+            }
+            // ** end profile_edit_inner
+        }
+        // ** end profile_edit
+
+    }
+    // ** end profile_content_inner
+    
+}

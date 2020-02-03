@@ -1,0 +1,50 @@
+body {
+    overflow-x: hidden;
+    background: $dark;
+    font-family: $font;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+input:focus, button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+
+::placeholder {
+    color: $dark;
+    font-size: $small_font;
+}
+
+
+
+.global_p {
+    line-height: 1.7em;
+    font-size: $small_font;
+    color: $gray;
+}
+
+.t_item_body::-webkit-scrollbar {
+    width: 5px;
+    opacity: 0;
+    display: none;
+}
+
+// /* Handle */
+.t_item_body::-webkit-scrollbar-thumb {
+    background: $gray;
+    border-radius: 5px;
+    opacity: 0;
+}
+
+.t_item_body:hover::-webkit-scrollbar  {
+    opacity: 1;
+    display: block;
+
+}

@@ -1,0 +1,19 @@
+header.position-relative.d-flex.align-items-center
+    .container-fluid
+        // start header_inner
+        .header_inner.d-flex.justify-content-between.align-items-center
+            
+            // start logo
+            .logo.d-flex.align-items-center
+                button.toggle_sidebar_btn.d-block.d-lg-none
+                    span.lineone
+                    span.linetwo
+                    span.linethree
+                a(href="index.html", class="text-capitalize font-weight-bold") dashboard
+            // ** end logo
+
+            // start header_option
+            include header_option/header_option
+            // ** end header_option
+
+        // ** end header_inner

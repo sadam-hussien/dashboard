@@ -1,0 +1,108 @@
+// start dashboard_items
+.dashboard_items
+    .row
+        // start performance_item
+        .col-12
+            .performance_item.card_chart
+                .chart_content
+                    // start chart_content_head
+                    .chart_content_head
+                        // start chart_content_head_text
+                        .chart_content_head_text
+                            span.sub-title Total Shipments
+                            h3.chart_title Performance
+                        // ** end chart_content_head_text
+
+                        // start charts_updates_btn
+                        .charts_updates_btn
+                            button.active(onclick="chartUpdateA()") 
+                                span.text.d-none.d-sm-block Accounts
+                                span.icon.d-block.d-sm-none <i class="fas fa-user"></i>
+                            button(onclick="chartUpdateP()") 
+                                span.text.d-none.d-sm-block Purchases
+                                span.icon.d-block.d-sm-none <i class="fas fa-gift"></i>
+                            button(onclick="chartUpdateS()") 
+                                span.text.d-none.d-sm-block Sessions
+                                span.icon.d-block.d-sm-none <i class="fas fa-hand-pointer"></i>
+                        // ** end charts_updates_btn
+
+                    // ** end chart_content_head
+
+                    // start chart_content_body
+                    .chart_content_body
+                        <canvas id="performance_chart"></canvas>
+                    // ** end chart_content_body
+
+        // ** end performance_item
+
+    .row
+        
+        // start shipments_item
+        .col-12.col-lg-4
+            .shipments_item.card_chart
+                .chart_content
+                    // start chart_content_head
+                    .chart_content_head
+                        // start chart_content_head_text
+                        .chart_content_head_text
+                            span.sub-title Total Shipments
+                            h3.chart_title 
+                                span.icon <i class="fas fa-bell"></i>
+                                span.text 763,215
+                        // ** end chart_content_head_text
+
+                    // ** end chart_content_head
+
+                    // start chart_content_body
+                    .chart_content_body
+                        <canvas id="shipments_chart"></canvas>
+                    // ** end chart_content_body
+
+        // ** end shipments_item
+        
+        // start daily_item
+        .col-12.col-lg-4
+            .daily_item.card_chart
+                .chart_content
+                    // start chart_content_head
+                    .chart_content_head
+                        // start chart_content_head_text
+                        .chart_content_head_text
+                            span.sub-title Daily Sales
+                            h3.chart_title 
+                                span.icon <i class="fas fa-shipping-fast"></i>
+                                span.text 3,500€
+                        // ** end chart_content_head_text
+
+                    // ** end chart_content_head
+
+                    // start chart_content_body
+                    .chart_content_body
+                        <canvas id="daily_chart"></canvas>
+                    // ** end chart_content_body
+
+        // ** end daily_item
+        
+        // start completed_item
+        .col-12.col-lg-4
+            .completed_item.card_chart
+                .chart_content
+                    // start chart_content_head
+                    .chart_content_head
+                        // start chart_content_head_text
+                        .chart_content_head_text
+                            span.sub-title completed tasks
+                            h3.chart_title 
+                                span.icon <i class="fas fa-paper-plane"></i>
+                                span.text 12,100K
+                        // ** end chart_content_head_text
+
+                    // ** end chart_content_head
+
+                    // start chart_content_body
+                    .chart_content_body
+                        <canvas id="completed_chart"></canvas>
+                    // ** end chart_content_body
+
+        // ** end completed_item
+// ** end dashboard_items

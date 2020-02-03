@@ -1,0 +1,49 @@
+section.settings_box
+    // start toggle_settings
+    .toggle_settings
+        <i class="fas fa-cog"></i>
+    // ** end toggle_settings
+
+    // start settings_content
+    .settings_content
+
+        // start single_setting
+        .single_setting
+            
+            // start single_setting_head
+            .single_setting_head
+                h6 sidebar background
+            // ** end single_setting_head
+
+            // start single_setting_color
+            .single_setting_color.modes_option
+                - var dark_light = ["default_mode", "light_mode"]
+                ul.list-unstyled.d-flex.m-0.p-0.align-items-center.justify-content-center
+                    each da_li in dark_light
+                        li(data-theme=da_li)
+            // ** end single_setting_color
+
+        // ** end single_setting
+
+        // start single_setting
+        .single_setting
+            
+            // start single_setting_head
+            .single_setting_head
+                h6 mode
+            // ** end single_setting_head
+
+            // start single_setting_color
+            .single_setting_color.sidebar_color_option
+                - var themes = ["default_sidebar_theme", "blue_sidebar_theme"]
+                ul.list-unstyled.d-flex.m-0.p-0.align-items-center.justify-content-center
+                    each theme in themes
+                        li(data-theme=theme)
+
+            // ** end single_setting_color
+
+        // ** end single_setting
+
+
+
+    // end settings_content

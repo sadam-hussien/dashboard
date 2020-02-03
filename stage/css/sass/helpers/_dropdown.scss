@@ -1,0 +1,47 @@
+%dropdown {
+    // start dashboard_profile_option
+    .dropdown-menu {
+        background-color: $white;
+        min-width: 200px;
+        padding: $medium_distance !important;
+        left: auto !important;
+        right: 0 !important;
+        top: 20px !important;
+        transform: translate3d(0, 30px, 0px) !important;
+        &.show {
+
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: -16px;
+            right: $medium_distance;
+            border-width: 8px;
+            border-style: solid;
+            border-color: transparent transparent $white transparent;
+        }
+        .dropdown-item {
+            padding: 0; 
+            &:hover {
+                background-color: transparent;
+            }
+        }
+        li {
+            a {
+                font-size: 12px;
+                display: block;
+                color: $gray;
+                padding: $small_distance $medium_distance;
+                @include transition(.5s);
+                &:hover {
+                    background-color: rgba(222, 222, 222, 0.3);
+                }
+
+            }
+            &.make_line {
+                border-top: 1px solid rgba(222, 222, 222, 0.5);
+            }
+        }
+    }
+    // ** end dashboard_profile_option
+}

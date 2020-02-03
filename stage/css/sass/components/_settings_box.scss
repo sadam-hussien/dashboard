@@ -1,0 +1,136 @@
+.settings_box {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    padding: $large_distance;
+    z-index: 99999;
+    transform: translateX(100%);
+    // start toggle_settings
+    .toggle_settings {
+        width: 60px;
+        height: 50px;
+        line-height: 50px;
+        background: rgba(#000, .2);
+        border-radius: 10px 0 0 10px;
+        font-size: $large_font;
+        padding-left: 15px;
+        position: absolute;
+        right: 100%;
+        top: 25%;
+        cursor: pointer;
+        font-weight: bold;
+        color: $white;
+        i {
+
+        }
+    }
+    // ** end toggle_settings
+
+    // start settings_content
+    .settings_content {
+        width: 250px;
+        padding: $medium_distance;
+        border-radius: 10px;
+        background-color: #222a41;
+        text-align: center;
+        position: absolute;
+        right: 170px;
+        top: 18%;
+        box-shadow: 0 0 15px rgba($dark, 1);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        @include transition(.5s);
+        &.active_setting {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 30%;
+            right: -30px;
+            border-width: 15px;
+            border-style: solid;
+            border-color: transparent transparent transparent #222a41;
+            
+        }
+        // transform: translateY(70%);
+        // start single_setting
+        .single_setting {
+            margin-bottom: $medium_distance;
+            padding-bottom: $medium_distance;
+            border-bottom: 1px solid rgba($white, .1);
+            // start single_setting_head
+            .single_setting_head {
+                h6 {
+                    color: $white;
+                    text-transform: capitalize;
+                    margin-bottom: $medium_distance;
+                }
+            }
+            // ** end single_setting_head
+
+            // start single_setting_color
+            .single_setting_color.sidebar_color_option {
+                ul {
+                    $width: 18px;
+                    $our_colors: $pink, $sky;
+                    @for $i from 1 through length($our_colors) {
+                        li:nth-of-type(#{$i}) {
+                            background-color: nth($our_colors, $i);
+                        }
+                    }
+                    li {
+                        width: $width;
+                        height: $width;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        @include transition(.5s);
+                        &:not(:last-of-type) {
+                            margin-right: $medium_distance;
+                        }
+                        &.active_color {
+                            border: 1px solid $white;
+                        }
+                    }
+                }
+            }
+            // ** end single_setting_color
+
+            // start single_setting_color
+            .single_setting_color.modes_option {
+                ul {
+                    $width: 18px;
+                    $our_modes: $dark, $white;
+                    @for $i from 1 through length($our_modes) {
+                        li:nth-of-type(#{$i}) {
+                            background-color: nth($our_modes, $i);
+                        }
+                    }
+                    li {
+                        width: $width;
+                        height: $width;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        @include transition(.5s);
+                        &:not(:last-of-type) {
+                            margin-right: $medium_distance;
+                        }
+                        &.active_color {
+                            border: 1px solid $white;
+                        }
+                    }
+                }
+            }
+            // ** end single_setting_color
+
+        }
+        // ** end single_setting
+
+    }
+    // ** end settings_content
+
+}

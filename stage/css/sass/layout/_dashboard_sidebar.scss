@@ -1,0 +1,101 @@
+aside.dashboard_sidebar {
+    width: $dashboard_sidebar_width;
+    background: linear-gradient(0deg, $blue 0%, $pink 100%);
+    position: fixed;
+    top: $header_height;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 10px 10px 0 0;
+    left: 15px;
+    @include transition(.5s);
+    @media (max-width: 991px) {
+        & {
+            left: -100%;
+            &.activebar {
+                left: 15px;
+            }
+        }
+    }
+    // start dash_sidebar_head
+    .dash_sidebar_head {
+        padding: $medium_distance $small_distance;
+        position: relative;
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: rgba($white, .5);
+            margin-top: $medium_distance;
+        }
+        .min_text {
+            position: absolute;
+            left: $small_distance;
+            background-color: $white;
+            color: $blue;
+            font-size: $small_font;
+            border-radius: 10px;
+            padding: 5px;
+        }
+    }
+    // ** end dash_sidebar_head
+
+    // start dash_sidebar_content
+    .dash_sidebar_content {
+        padding: $medium_distance $small_distance;
+
+        // start dash_sidebar_links 
+        .dash_sidebar_links {
+            $w: 60px;
+            ul {
+                li {
+                    margin-bottom: $medium_distance;
+                    a {
+                        color: rgba($white, .8);
+                        font-size: $small_font;
+                        display: block;
+                        position: relative;
+                        .icon {
+                            display: inline-block;
+                            width: $w;
+                            height: 30px;
+                            line-height: 30px;
+                            text-align: center;
+                            position: relative;
+                            font-size: 13px;
+                        }
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: 0;
+                            width: 5px;
+                            height: 5px;
+                            background-color: $white;
+                            border-radius: 50%;
+                            opacity: 0;
+                            @include transition(.5s);
+                        }
+                        &.active, &:hover {
+                            color: rgba($white, 1);
+                            &::before {
+                                opacity: 1;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+        // ** end dash_sidebar_links
+
+    }
+    // ** end dash_sidebar_content
+
+}

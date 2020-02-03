@@ -1,0 +1,104 @@
+$themes: (
+
+    default_sidebar_theme: (
+        color: linear-gradient(0deg, $blue 0%, $pink 100%),
+    ),
+
+    blue_sidebar_theme: (
+        color: $sky,
+    )
+
+);
+
+@each $theme, $map in $themes {
+    .#{$theme} {
+        // asiide
+        aside.dashboard_sidebar {
+            background: map-get($map, color);
+        }
+        // toggle_sidebar_btn
+        header .header_inner .logo .toggle_sidebar_btn span {
+            background: map-get($map, color);
+        }
+
+    }
+}
+
+// ** end sidebar themes
+
+// start light and dark mode
+$dark_light: (
+
+    default_mode: (
+        bgcoloring: $dark,
+        coloring: $white,
+
+    ),
+    light_mode: (
+        bgcoloring: $white,
+        coloring: $dark,
+        graycolor: #f3f3f3,
+    ),
+
+);
+
+@each $d_l, $map in $dark_light {
+    .#{$d_l} {
+        & {
+            background-color: map-get($map, bgcoloring);
+        }
+        header .header_inner .logo .toggle_sidebar_btn span {
+            background-color: map-get($map, coloring);
+        }
+        header .header_inner .logo a {
+            color: map-get($map, coloring);
+        }
+        header .header_inner .header_option .header_option_inner li i {
+            color: map-get($map, coloring);
+        }
+        .dashboard .dashboard_inner .dashboard_content .dashboard_items .card_chart {
+            background-color: map-get($map, graycolor);
+        }
+        .dashboard .dashboard_inner .dashboard_content .dashboard_items .card_chart .chart_content .chart_content_head .chart_content_head_text .chart_title {
+            color: map-get($map, coloring);
+        }
+        .dashboard .tasks .tasks_items .task_globals, .profile_card, .profile_content .profile_content_inner .profile_edit {
+            background-color: map-get($map, graycolor);
+        }
+        .dashboard .tasks .tasks_items .t_item .t_item_inner .t_item_head .t_item_head_title .text {
+            color: map-get($map, coloring);
+        }
+        .dashboard .tasks .tasks_items .t_item .t_item_inner .t_item_body .single_task .checkbox_area input[type=checkbox] {
+            border-color: map-get($map, coloring);
+        }
+        .dashboard .tasks .tasks_items .tabel_describe .tabel_describe_title {
+            color: map-get($map, coloring);
+        }
+        .dashboard .tasks .tasks_items .tabel_describe .table th {
+            color: map-get($map, coloring);
+        }
+        .profile_content .profile_content_inner .profile_edit .profile_edit_inner .profile_edit_body input {
+            color: map-get($map, coloring);
+        }
+        .profile_content .profile_content_inner .profile_edit .profile_edit_inner .profile_edit_head h6 {
+            color: map-get($map, coloring);
+        }
+        footer ul li a, footer p a {
+            color: map-get($map, coloring);
+        }
+        .profile_card .profile_card_inner .profile_img .shape.profile_img_shap1,
+        .profile_card .profile_card_inner .profile_img .shape.profile_img_shap2,
+        .profile_card .profile_card_inner .profile_img .shape.profile_img_shap3 {
+            border-color: map-get($map, coloring);
+        }
+        .profile_card .profile_card_inner .profile_card_mylinks ul li a {
+            border-color: map-get($map, coloring);
+            color: map-get($map, coloring);
+        }
+        .profile_content .profile_content_inner .profile_edit .profile_edit_inner .profile_edit_body textarea {
+            color: map-get($map, coloring);
+        }
+        
+    }
+}
+// ** end light and dark mode

@@ -1,0 +1,29 @@
+// fonts
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900&display=swap');
+
+//  start vars
+@import "sass/variables/global";
+@import "sass/variables/color";
+
+// start helpers
+@import "sass/helpers/global";
+@import "sass/helpers/mixins";
+@import "sass/helpers/dropdown";
+@import "sass/helpers/dynamic_width";
+
+// start layout
+@import "sass/layout/header";
+@import "sass/layout/search_box";
+@import "sass/layout/dashboard_sidebar";
+@import "sass/layout/footer";
+
+// start components
+@import "sass/components/profile_card";
+@import "sass/components/settings_box";
+
+// start pages
+@import "sass/pages/dashboard";
+@import "sass/pages/profile_content";
+
+// options
+@import "sass/options/themes";

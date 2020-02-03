@@ -1,0 +1,15 @@
+section.search_box.position-relative
+    .container-fluid
+        // start search_box_content
+        .search_box_content.d-flex.align-items-center.justify-content-between
+            // start search_item
+            .search_item
+                form
+                    input.form-control(type="search", name="search", placeholder="Search")
+            // ** end search_item
+
+            // start search_icon
+            button.search_icon_close
+                <i class="fas fa-times"></i>
+            // ** end search_icon
+        // ** end search_box_content

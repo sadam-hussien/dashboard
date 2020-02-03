@@ -1,0 +1,164 @@
+// start header
+header {
+    height: $header_height;
+    position: relative;
+    z-index: 99999;
+    // start header_inner
+    .header_inner {
+
+        // start logo
+        .logo {
+            // start toggle_sidebar_btn 
+            .toggle_sidebar_btn  {
+                padding: 5px;
+                background-color: transparent;
+                border: none;
+                margin-right: $medium_distance;
+                
+                span {
+                    display: block;
+                    height: 2px;
+                    width: 25px;
+                    background-color: $white;
+                    @include transition(.5s);
+                    &:not(:last-of-type) {
+                        margin-bottom: 5px;
+                    }
+                    &.lineone {
+
+                    }
+                    &.linetwo {
+                        width: 18px;
+                    }
+                    &.linethree {
+
+                    }
+                }
+                &.active {
+                    span {
+                        background-color: $pink;
+                        &.lineone {
+                            transform: translate(0px, 8px) rotate(45deg);
+                        }
+                        &.linetwo {
+                            transform: translateX(-30px);
+                            opacity: 0;
+                        }
+                        &.linethree {
+                            transform: translate(0px, -6px) rotate(-45deg);
+                        }
+                    }
+                }
+            }
+            // ** end toggle_sidebar_btn 
+            a {
+                font-size: $large_font;
+                color: $white;
+            }
+        }
+        // ** end logo  
+
+        // start header_option
+        .header_option {
+
+            // start header_option_inner
+            .header_option_inner {
+                li {
+                    cursor: pointer;
+                    &:not(:last-of-type) {
+                        margin-right: $medium_distance;
+                    }
+                    i {
+                        color: $white;
+                        font-size: 16px;
+                    }
+                }
+
+                // start dashboard_profile
+                .dashboard_profile {
+                    @include transition(.5s);
+                    @extend %dropdown;
+
+                    // start dashboard_profile_inner
+                    .dashboard_profile_inner {
+                        .img {
+                            margin-right: $small_distance;
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            overflow: hidden;
+                            img {
+                                
+                            }
+                        }
+                    }
+                    // ** end dashboard_profile_inner
+                
+                }
+                // ** end dashboard_profile
+
+                // start dashboard_notify
+                .dashboard_notify {
+                    @extend %dropdown;
+                }
+                // ** end dashboard_notify
+                @media (max-width: 576px) {
+                    position: absolute;
+                    width: 100vw;
+                    height: auto;
+                    padding: 20px !important;
+                    background: $white;
+                    left: 0;
+                    top: -100%;
+                    z-index: 9;
+                    justify-content: center;
+                    @include transition(.5s);
+                    &.active {
+                        top: 0;
+                    }
+                    li {
+                        i {
+                            color: $dark;
+                        }
+                    }
+                }
+
+            }
+            // ** end header_option_inner
+
+            // start responsive_header_option
+            .responsive_header_option {
+                position: relative;
+                z-index: 99;
+                
+                .toggle_responsive_header_option {
+                    background: transparent;
+                    border: none;
+                    padding: 5px;
+                    span {
+                        display: block;
+                        width: 5px;
+                        height: 5px;
+                        border-radius: 50%;
+                        background-color: $white;
+                        &:not(:last-of-type) {
+                            margin-bottom: 5px;
+                        }
+                    }
+                }
+                &.active {
+                    .toggle_responsive_header_option span {
+                        background-color: $dark;
+                    }
+                }
+            }
+            // ** end responsive_header_option
+
+        }
+        // ** end header_option
+
+    }
+    // ** end header_inner
+
+}
+// ** end header

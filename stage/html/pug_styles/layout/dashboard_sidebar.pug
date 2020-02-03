@@ -1,0 +1,41 @@
+block link_title
+    - var link = "dashboard";
+block sidbar
+    aside.dashboard_sidebar
+        
+        // start dash_sidebar_head
+        .dash_sidebar_head.text-center
+            h5.m-0.font-weight-bold.text-capitalize
+                span.min_text.text-uppercase s.h
+                span sadam hussien
+        // ** end dash_sidebar_head
+
+        // start dash_sidebar_content
+        .dash_sidebar_content
+
+            // start dash_sidebar_links
+            nav.dash_sidebar_links
+                ul.list-unstyled.m-0.p-0.text-capitalize
+                    li
+                        a(href="index.html", class= link === "dashboard" ? "active" : "") 
+                            span.icon <i class="fas fa-chart-pie"></i>
+                            span.text dashboard
+                    li
+                        a(href="user_profile.html", class= link === "user profile" ? "active" : "")                     
+                            span.icon <i class="fas fa-user"></i>
+                            span.text user profile 
+                    li
+                        a(href="notifications.html", class= link === "notifications" ? "active" : "")                      
+                            span.icon <i class="fas fa-bell"></i>
+                            span.text notifications
+                    li
+                        a(href="maps.html", class= link === "maps" ? "active" : "")                      
+                            span.icon <i class="fas fa-map-marker-alt"></i>
+                            span.text maps
+                    li
+                        a(href="tabel_list.html", class= link === "tabel list" ? "active" : "")                      
+                            span.icon <i class="fas fa-puzzle-piece"></i>
+                            span.text tabel list
+            // start dash_sidebar_links
+
+        // ** end dash_sidebar_content

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        // meta
+        block meta
+            include pug_styles/global/meta
+    body
+
+        // start search_box
+        include pug_styles/layout/search_box
+        // ** end search_box
+
+        // start header
+        include pug_styles/layout/header/header
+        // ** end header
+
+
+        block dashbord_home
+            // start dashboard
+            include pug_styles/pages/dashboard
+            // ** end dashboard
+
+        // start settings_box
+        include pug_styles/components/settings_box
+        // ** end settings_box
+
+        block scripts
+            // scripts
+            include pug_styles/global/scripts

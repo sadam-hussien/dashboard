@@ -1,0 +1,99 @@
+
+section.profile_content.dynamic_width.position-relative
+    .container-fluid
+        // start profile_content_inner
+        .profile_content_inner
+            .row
+
+                // start profile_card
+                .col-md-5
+                    include ../components/profile_card
+                // ** end profile_card
+
+                // start profile_edit
+                .col-md-7
+                    .profile_edit
+                        .profile_edit_inner
+                            // start profile_edit_head
+                            .profile_edit_head
+                                h6 edit profile
+                            // ** end profile_edit_head
+
+                            // start profile_edit_body
+                            .profile_edit_body.card
+                                form
+                                    .form-group.d-block.d-lg-flex.align-items-center
+                                        // start single_inp
+                                        .single_inpt.flex-fill
+                                            label(for="company_inp") company (disabled)
+                                            input(type="text", placeholder="creative code", disabled, class="form-control", id="company_inp")
+                                        // ** end single_inp
+
+                                        // start single_inp
+                                        .single_inpt.flex-fill
+                                            label(for="username_inp") username
+                                            input(type="text", value="sadam-h", class="form-control", id="username_inp")
+                                        // ** end single_inp
+
+                                        // start single_inp
+                                        .single_inpt.flex-fill
+                                            label(for="email_inp") email address
+                                            input(type="email", placeholder="m.hus.dev@gmail.com", class="form-control", id="email_inp")
+                                        // ** end single_inp
+
+                                    .form-group.d-block.d-lg-flex.align-items-center
+                                        // start single_inp
+                                        .single_inpt.flex-fill
+                                            label(for="firstname_inp") first name
+                                            input(type="text", value="sadam", class="form-control", id="firstname_inp")
+                                        // ** end single_inp
+
+                                        // start single_inp
+                                        .single_inpt.flex-fill
+                                            label(for="lastname_inp") last name
+                                            input(type="text", value="hussien", class="form-control", id="lastname_inp")
+                                        // ** end single_inp
+
+                                    .form-group
+                                        // start single_inp
+                                        .single_inpt
+                                            label(for="address_inp") address
+                                            input(type="text", value="egypt-elminya-maghagha", class="form-control", id="address_inp")
+                                        // ** end single_inp
+
+                                    .form-group.d-block.d-lg-flex.align-items-center
+                                        // start single_inp
+                                        .single_inpt.flex-fill
+                                            label(for="city_inp") city
+                                            input(type="text", value="maghagha", class="form-control", id="city_inp")
+                                        // ** end single_inp
+
+                                        // start single_inp
+                                        .single_inpt.flex-fill
+                                            label(for="country_inp") egypt
+                                            input(type="text", value="egypt", class="form-control", id="country_inp")
+                                        // ** end single_inp
+
+                                        // start single_inp
+                                        .single_inpt.flex-fill
+                                            label(for="postal_inp") postal code
+                                            input(type="number", placeholder="zip code", class="form-control", id="postal_inp")
+                                        // ** end single_inp
+
+                                    .form-group
+                                        .single_inp
+                                            label(for="aboutme_inp") about me
+                                            textarea(class="form-control", id="aboutme_inp") Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.
+
+                                    .svae_inp
+                                        button(type="submit") save
+
+                            // ** end profile_edit_body
+
+                // ** edit profile_edit
+
+        // ** end profile_content_inner
+
+        // footer
+        include ../layout/footer
+        // ** end footer
